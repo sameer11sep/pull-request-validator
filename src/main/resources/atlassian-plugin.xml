@@ -1,0 +1,25 @@
+<atlassian-plugin key="com.xebialabs.workflow.validator" name="Xebia Labs WorkFlow Validator Plugin"  plugins-version="2">
+    <plugin-info>
+        <description>Xebia Labs WorkFlow Validator Plugin</description>
+        <version>1.0</version>
+        <vendor name="Xebia Labs" url="http://www.xebialabs.com"/>
+    </plugin-info>
+
+    <!-- Field Not Empty Workflow Validator -->
+    <workflow-validator key="pullrequest-validator" name="Pull Request Validator"
+                        class="com.xebialabs.PullRequestTaskValidatorFactory">
+        <description>No Pull Request Workflow Validator</description>
+
+        <validator-class>
+            com.xebialabs.PullRequestTaskValidator
+        </validator-class>
+
+        <resource type="velocity" name="view"
+                  location="pullrequest-issue-validator.vm"/>
+        <resource type="velocity" name="input-parameters"
+                  location="pullrequest-issue-validator.vm"/>
+        <resource type="velocity" name="edit-parameters"
+                  location="pullrequest-issue-validator.vm"/>
+    </workflow-validator>
+
+</atlassian-plugin>
