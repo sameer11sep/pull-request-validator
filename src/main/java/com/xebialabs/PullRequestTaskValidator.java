@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by sameerarora on 7/24/15.
+ * The Validator class for checking if PRs are associated with the JIRA Id.
  */
 public class PullRequestTaskValidator implements Validator {
 
